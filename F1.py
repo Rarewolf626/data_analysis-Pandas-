@@ -122,7 +122,7 @@ season_finale = season_finale[season_finale.year != 2020]
 
 import pandas as pd
 
-races_df = races_df = pd.read_csv(r'S:\Projects\F1\races.csv')
+races_df = races_df = pd.read_csv(r'path to ur data set')
 
 idx = races_df.groupby(['year'])['date'].transform('max') == races_df['date']
 season_finale = races_df[idx].rename(columns={'round': 'tot_races'})
